@@ -2,42 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Expenses chart component</title>
 </head>
 <body>
+  <article>
+    <div class="balance-card">
+      <p class="balance-card__title">My balance</p> 
+      <p class="balance-card__amount">$921.48</p> 
+      <img src="images/logo.svg" alt="card-logo" class="balance-card__logo">
+    </div>
+    
+    <div class="spending-card">
+      <h2 class="spending-card__title">Spending - Last 7 days</h2>
+      
+      <figure class="figure-mon">
+        <div class="spending-card__bar spending-card__bar--mon">
+        </div>
+        <figcaption>mon</figcaption>
+      </figure>
 
-  My balance
-  $921.48
+      <figure class="figure-tue">
+        <div class="spending-card__bar spending-card__bar--tue">
+        </div>
+        <figcaption>tue</figcaption>
+      </figure>
+      
+      <figure class="figure-wed">
+        <div class="spending-card__bar spending-card__bar--wed spending-card__bard--active">
+        </div>
+        <figcaption>wed</figcaption>
+      </figure>
+      
+      <figure class="figure-thu">
+        <div class="spending-card__bar spending-card__bar--thu">
+        </div>
+        <figcaption>thu</figcaption>
+      </figure>
+      
+      <figure class="figure-fri">
+        <div class="spending-card__bar spending-card__bar--fri">
+        </div>
+        <figcaption>fri</figcaption>
+      </figure>
+      
+      <figure class="figure-sat">
+        <div class="spending-card__bar spending-card__bar--sat">
+        </div>
+        <figcaption>sat</figcaption>
+      </figure>
+      
+      <figure class="figure-sun">
+        <div class="spending-card__bar spending-card__bar--sun">
+        </div>
+        <figcaption>sun</figcaption>
+      </figure>
 
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="spending-card__footer">
+        <p class="title">Total this month</p>
+        <p class="total-amount">$478.33</p>
+        <p class="additional">+2.4%</p>
+        <p class="description">from last month</p>     
+      </div>
+    </div>
+  </article>
 </body>
 </html>
