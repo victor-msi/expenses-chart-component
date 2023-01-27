@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
   <title>Expenses chart component</title>
 </head>
 <body>
@@ -20,53 +23,57 @@
     <div class="spending-card">
       <h2 class="spending-card__title">Spending - Last 7 days</h2>
       
-      <figure class="figure-mon">
-        <div class="spending-card__bar spending-card__bar--mon">
-        </div>
-        <figcaption>mon</figcaption>
-      </figure>
-
-      <figure class="figure-tue">
-        <div class="spending-card__bar spending-card__bar--tue">
-        </div>
-        <figcaption>tue</figcaption>
-      </figure>
-      
-      <figure class="figure-wed">
-        <div class="spending-card__bar spending-card__bar--wed spending-card__bard--active">
-        </div>
-        <figcaption>wed</figcaption>
-      </figure>
-      
-      <figure class="figure-thu">
-        <div class="spending-card__bar spending-card__bar--thu">
-        </div>
-        <figcaption>thu</figcaption>
-      </figure>
-      
-      <figure class="figure-fri">
-        <div class="spending-card__bar spending-card__bar--fri">
-        </div>
-        <figcaption>fri</figcaption>
-      </figure>
-      
-      <figure class="figure-sat">
-        <div class="spending-card__bar spending-card__bar--sat">
-        </div>
-        <figcaption>sat</figcaption>
-      </figure>
-      
-      <figure class="figure-sun">
-        <div class="spending-card__bar spending-card__bar--sun">
-        </div>
-        <figcaption>sun</figcaption>
-      </figure>
+      <div class="container-graphs">
+        <figure class="figure-mon">
+          <div class="spending-card__bar spending-card__bar--mon">
+          </div>
+          <figcaption>mon</figcaption>
+        </figure>
+        
+        <figure class="figure-tue">
+          <div class="spending-card__bar spending-card__bar--tue">
+          </div>
+          <figcaption>tue</figcaption>
+        </figure>
+        
+        <figure class="figure-wed">
+          <div class="spending-card__bar spending-card__bar--wed spending-card__bard--active">
+          </div>
+          <figcaption>wed</figcaption>
+        </figure>
+        
+        <figure class="figure-thu">
+          <div class="spending-card__bar spending-card__bar--thu">
+          </div>
+          <figcaption>thu</figcaption>
+        </figure>
+        
+        <figure class="figure-fri">
+          <div class="spending-card__bar spending-card__bar--fri">
+          </div>
+          <figcaption>fri</figcaption>
+        </figure>
+        
+        <figure class="figure-sat">
+          <div class="spending-card__bar spending-card__bar--sat">
+          </div>
+          <figcaption>sat</figcaption>
+        </figure>
+        
+        <figure class="figure-sun">
+          <div class="spending-card__bar spending-card__bar--sun">
+          </div>
+          <figcaption>sun</figcaption>
+        </figure>
+      </div>
 
       <div class="spending-card__footer">
         <p class="title">Total this month</p>
         <p class="total-amount">$478.33</p>
-        <p class="additional">+2.4%</p>
-        <p class="description">from last month</p>     
+        <div class="container-description">
+          <p class="additional">+2.4%</p>
+          <p class="description">from last month</p>     
+        </div>
       </div>
     </div>
   </article>

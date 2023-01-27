@@ -1,0 +1,4 @@
+@mixin bar-theme($height, $color){
+  height: $height;
+  background-color: $color;
+}
