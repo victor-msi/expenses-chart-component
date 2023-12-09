@@ -1,0 +1,46 @@
+@use 'variables';
+@use 'balance-card';
+@use 'spending-card';
+@use 'spending-card__footer';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: variables.$font-size;
+  font-family: "DM Sans", sans-serif;
+  background-color: variables.$Cream;
+}
+
+article{
+  position: relative;
+  top: 4em;
+}
+
+.spending-card__bar:hover{
+  opacity: .6;
+}
+
+@media screen and (max-width: 400px) {
+  .balance-card{
+    top: 2em;
+    min-width: 320px;
+  }
+
+  .spending-card{
+    top: 3em;
+    min-width: 320px;
+    height: 420px;
+  }
+
+  .container-graphs{
+    min-height: 230px;
+  }
+
+  .spending-card__footer{
+    margin-top: 10px;
+  }
+}

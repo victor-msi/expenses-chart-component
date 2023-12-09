@@ -1,0 +1,24 @@
+{
+  "name": "expenses-chart-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass",
+    "sass:watch": "sass --watch styles/sass/main.scss styles/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-msi/expenses-chart-component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victor-msi/expenses-chart-component/issues"
+  },
+  "homepage": "https://github.com/victor-msi/expenses-chart-component#readme",
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}
