@@ -1,6 +1,6 @@
 # Frontend Mentor - Expenses chart component
 
-Visualización del proyecto: https://victor-msi.github.io/expenses-chart-component/
+Proyecto desplegado en [GitHub Pages](https://victor-msi.github.io/expenses-chart-component/)
 
 ![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)
 
