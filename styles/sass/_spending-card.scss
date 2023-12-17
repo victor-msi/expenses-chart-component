@@ -1,7 +1,7 @@
-@use 'variables';
-@use 'functions';
+@use "variables";
+@use "mixins";
 
-.spending-card{
+.spending-card {
   position: relative;
   top: 5em;
   margin: 0 auto;
@@ -14,14 +14,14 @@
   border-radius: 15px;
   background-color: variables.$Very-pale-orange;
 
-  h2{
+  h2 {
     margin-left: 10px;
     font-size: variables.$font-size + 4px;
     font-weight: 700;
     color: variables.$Dark-brown;
   }
 
-  .container-graphs{
+  .container-graphs {
     margin-top: 10px;
     height: 180px;
     display: flex;
@@ -29,15 +29,29 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 5px;
-    /* border: 1px solid black; */
   }
 
-  figure{
-    display: inline-block;
-    width: 45px;
-    /* border: 1px solid black; */
+  .amount {
+    position: relative;
+    right: 6px;
+    font-size: 0.8em;
+    width: 4em;
+    height: 2.3em;
+    margin: auto;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 6px;
+    background-color: variables.$Dark-brown;
+    color: variables.$Very-pale-orange;
+    font-weight: 700;
+    display: none;
+  }
 
-    figcaption{
+  figure {
+    display: inline-block;
+    width: 11%;
+
+    figcaption {
       margin-top: 5px;
       font-size: variables.$font-size - 5px;
       font-weight: 400;
@@ -47,44 +61,43 @@
   }
 }
 
-%spending-card__bar{
+%spending-card__bar {
   width: 100%;
   border-radius: 6px;
+  margin-top: 8px;
 }
 
-/* Multiplicar los montos x 2.5 */
-
-.spending-card__bar--mon{
+.spending-card__bar--mon {
   @extend %spending-card__bar;
-  @include functions.bar-theme(17.45px, variables.$Soft-red);
+  @include mixins.bar-theme(variables.$Soft-red);
 }
 
-.spending-card__bar--tue{
+.spending-card__bar--tue {
   @extend %spending-card__bar;
-  @include functions.bar-theme(34.91px, variables.$Soft-red);
+  @include mixins.bar-theme(variables.$Soft-red);
 }
 
-.spending-card__bar--wed{
+.spending-card__bar--wed {
   @extend %spending-card__bar;
-  @include functions.bar-theme(52.36px, variables.$Cyan);
+  @include mixins.bar-theme(variables.$Cyan);
 }
 
-.spending-card__bar--thu{
+.spending-card__bar--thu {
   @extend %spending-card__bar;
-  @include functions.bar-theme(31.07px, variables.$Soft-red);
+  @include mixins.bar-theme(variables.$Soft-red);
 }
 
-.spending-card__bar--fri{
+.spending-card__bar--fri {
   @extend %spending-card__bar;
-  @include functions.bar-theme(23.39px, variables.$Soft-red);
+  @include mixins.bar-theme(variables.$Soft-red);
 }
 
-.spending-card__bar--sat{
+.spending-card__bar--sat {
   @extend %spending-card__bar;
-  @include functions.bar-theme(43.28px, variables.$Soft-red);
+  @include mixins.bar-theme(variables.$Soft-red);
 }
 
-.spending-card__bar--sun{
+.spending-card__bar--sun {
   @extend %spending-card__bar;
-  @include functions.bar-theme(25.48px, variables.$Soft-red);
+  @include mixins.bar-theme(variables.$Soft-red);
 }

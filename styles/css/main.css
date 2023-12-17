@@ -65,12 +65,25 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 5px;
-  /* border: 1px solid black; */
+}
+.spending-card .amount {
+  position: relative;
+  right: 6px;
+  font-size: 0.8em;
+  width: 4em;
+  height: 2.3em;
+  margin: auto;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 6px;
+  background-color: hsl(25, 47%, 15%);
+  color: hsl(33, 100%, 98%);
+  font-weight: 700;
+  display: none;
 }
 .spending-card figure {
   display: inline-block;
-  width: 45px;
-  /* border: 1px solid black; */
+  width: 11%;
 }
 .spending-card figure figcaption {
   margin-top: 5px;
@@ -83,41 +96,34 @@
 .spending-card__bar--sun, .spending-card__bar--sat, .spending-card__bar--fri, .spending-card__bar--thu, .spending-card__bar--wed, .spending-card__bar--tue, .spending-card__bar--mon {
   width: 100%;
   border-radius: 6px;
+  margin-top: 8px;
 }
 
-/* Multiplicar los montos x 2.5 */
 .spending-card__bar--mon {
-  height: 17.45px;
   background-color: hsl(10, 79%, 65%);
 }
 
 .spending-card__bar--tue {
-  height: 34.91px;
   background-color: hsl(10, 79%, 65%);
 }
 
 .spending-card__bar--wed {
-  height: 52.36px;
   background-color: hsl(186, 34%, 60%);
 }
 
 .spending-card__bar--thu {
-  height: 31.07px;
   background-color: hsl(10, 79%, 65%);
 }
 
 .spending-card__bar--fri {
-  height: 23.39px;
   background-color: hsl(10, 79%, 65%);
 }
 
 .spending-card__bar--sat {
-  height: 43.28px;
   background-color: hsl(10, 79%, 65%);
 }
 
 .spending-card__bar--sun {
-  height: 25.48px;
   background-color: hsl(10, 79%, 65%);
 }
 
@@ -189,10 +195,6 @@ body {
 article {
   position: relative;
   top: 4em;
-}
-
-.spending-card__bar:hover {
-  opacity: 0.6;
 }
 
 @media screen and (max-width: 400px) {

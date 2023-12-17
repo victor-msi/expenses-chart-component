@@ -1,43 +1,43 @@
-/* Variables para los dias */
-let day_monday = document.getElementById('monday');
-let day_tuesday = document.getElementById('tuesday');
-let day_wednesday = document.getElementById('wednesday');
-let day_thursday = document.getElementById('thursday');
-let day_friday = document.getElementById('friday');
-let day_saturday = document.getElementById('saturday');
-let day_sunday = document.getElementById('sunday');
-/* Variables para los montos */
-let amount_monday = document.getElementById('bar-mon');
-let amount_tuesday = document.getElementById('bar-tue');
-let amount_wednesday = document.getElementById('bar-wed');
-let amount_thursday = document.getElementById('bar-thu');
-let amount_friday = document.getElementById('bar-fri');
-let amount_saturday = document.getElementById('bar-sat');
-let amount_sunday = document.getElementById('bar-sun');
-/* URL para el acceso a los datos */
-const url = 'data.json'
+const days = document.getElementsByClassName('day');        /* Array para los dias */
+const cards = document.getElementsByClassName('card-bar');  /* Array para los cards */
+const amounts = document.getElementsByClassName('amount');  /* Array para los montos */
+const url = 'data.json'                                     /* URL para obtener los datos */
 
-fetch(url)  /* Llamando a los datos */
-  .then(Response => Response.json())  /* Parseando la respuesta a JSON */
-  .then(function AssigningValues(Response){
-    /* Asignando valores a los dias */
-    day_monday.innerText = Response[0].day;    
-    day_tuesday.innerText = Response[1].day;
-    day_wednesday.innerText = Response[2].day;
-    day_thursday.innerText = Response[3].day;
-    day_friday.innerText = Response[4].day;
-    day_saturday.innerText = Response[5].day;
-    day_sunday.innerText = Response[6].day;
-    /* Guardando los valores de los montos */
-    amount_monday = Response[0].amount;    
-    amount_tuesday = Response[1].amount;
-    amount_wednesday = Response[2].amount;
-    amount_thursday = Response[3].amount;
-    amount_friday = Response[4].amount;
-    amount_saturday = Response[5].amount;
-    amount_sunday = Response[6].amount;
-  })
-  .catch(err => {
-    console.log(err);   /* Imprimiendo errores de la llamada- */
+/* Parseando los array de elmentos HTML, en arrays normales para poder utilizar operaciones de arreglos */
+const arrDays = Array.from(days);    
+const arrCards = Array.from(cards);   
+const arrAmounts = Array.from(amounts); 
+
+fetch(url)
+.then(Response => Response.json())                        /* Parseando la respuesta a JSON */
+.then(Response => {
+  arrDays.forEach((element, index) => {   
+    element.innerText = Response[index].day;            /* Asignando el nombre de los dias obtenidos de la URL (Json) */
   });
-  
+  arrCards.forEach((monto, index) => {
+    if (!isNaN(Response[index].amount) && Response[index].amount >= 0) {
+      monto.style.height = Response[index].amount*2.3 + 'px';    /* Asignando el tamaño de los cards */
+    }
+  });
+  return Response
+})
+.then(Response => {
+  arrCards.forEach((card, index) =>{
+    card.addEventListener('mouseover', (event)=>{   
+      card.style.opacity = '.6'
+      let id = event.target.getAttribute('id');     /* Obteniendo el id del elemento HTML que esta activando el evento hover */
+      let amount
+      if (Response[index].day == id)                /* Condicon que iguala el dia de la Respuesta con el id del elemento que activo el evento */
+        amount = Response[index].amount
+      arrAmounts[index].innerText = '$'+amount;         /* Asignando el amount al div correcto */
+      arrAmounts[index].style.display = 'block'     /* Mostrando el div */
+    })
+    card.addEventListener('mouseout', ()=>{
+      card.style.opacity = '1';                     
+      arrAmounts[index].style.display = 'none'      /* Ocultando el div */
+    })
+  });
+})
+.catch(err => {
+  console.log(err);   
+});

@@ -1,6 +1,6 @@
-@use 'variables';
+@use "variables";
 
-.spending-card__footer{
+.spending-card__footer {
   margin-top: 25px;
   padding-top: 25px;
   position: relative;
@@ -8,20 +8,20 @@
   border-top: 1px solid variables.$Cream;
 }
 
-.title{
+.title {
   margin-bottom: 3px;
   font-size: variables.$font-size - 5px;
   color: variables.$Medium-brown;
 }
 
-.total-amount{
+.total-amount {
   display: inline;
   font-size: variables.$font-size + 15px;
   font-weight: 700;
   color: variables.$Dark-brown;
 }
 
-.container-description{
+.container-description {
   position: absolute;
   right: 0px;
   width: 150px;
@@ -31,12 +31,12 @@
 }
 
 .additional,
-.description{
+.description {
   width: 120px;
   font-size: variables.$font-size - 5px;
 }
 
-.additional{
+.additional {
   display: inline-block;
   height: 18px;
   padding-left: 77px;
@@ -44,11 +44,11 @@
   color: variables.$Dark-brown;
 }
 
-.description{
+.description {
   position: relative;
   top: -6px;
   display: inline-block;
   height: 18px;
   padding-left: 22px;
-  color: variables.$Medium-brown;  
+  color: variables.$Medium-brown;
 }

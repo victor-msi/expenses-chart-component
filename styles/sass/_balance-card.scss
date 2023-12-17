@@ -1,6 +1,6 @@
-@use 'variables';
+@use "variables";
 
-.balance-card{
+.balance-card {
   position: relative;
   top: 4em;
   margin: 0 auto;
@@ -13,13 +13,13 @@
   border-radius: 15px;
   background-color: variables.$Soft-red;
 
-  p{
+  p {
     width: 100px;
     margin-left: 25px;
   }
 }
 
-.balance-card__title{
+.balance-card__title {
   margin-top: 15px;
   margin-bottom: 5px;
   font-size: variables.$font-size - 5px;
@@ -27,13 +27,13 @@
   color: variables.$Cream;
 }
 
-.balance-card__amount{
+.balance-card__amount {
   font-size: variables.$font-size + 6px;
   color: variables.$Very-pale-orange;
   font-weight: 700;
 }
 
-.balance-card__logo{
+.balance-card__logo {
   position: absolute;
   top: 15px;
   right: 25px;
